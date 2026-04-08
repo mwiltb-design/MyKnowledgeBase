@@ -1,0 +1,11 @@
+# Ignore common system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment variables and secrets
+.env
+*.pem
+*.key
+
+# Ignore AI temporary files
+.gemini/
