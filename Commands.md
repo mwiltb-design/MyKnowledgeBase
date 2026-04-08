@@ -6,6 +6,7 @@
 - Download/Move all files from that Drive folder into the local `\Raw` directory.
 - **Important:** Once a file is successfully moved to local storage, delete/trash the original from the Google Drive folder.
 
+
 ## Step 2: Process Raw Files
 - Scan the local `\Raw` folder for any new content.
 - **If a file is .png format:**
