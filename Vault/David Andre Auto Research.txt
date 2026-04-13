@@ -1,0 +1,569 @@
+My name is David Andre and this is the
+clearest explanation of auto research
+you're going to find on the internet. So
+what is auto research? It's an open-
+source project by Andre Karpathy that
+lets AI improve itself autonomously. You
+have an AI agent that runs experiments
+automatically and it keeps what works
+and throws away everything that doesn't.
+So in this video I'm going to explain
+how auto research actually works, how
+you can use it in your own life and
+business because there are a lot of
+implications and how you can build your
+very first auto research loop. So, if
+you really want to be on the cutting
+edge of AI, make sure to watch until the
+end. First off, who is Andre Kapathy?
+He's one of the most legendary AI
+researchers of all time. He's one of the
+OpenAI co-founders, and he's the main
+person behind Tesla autopilot. Oh, yeah.
+And he's also the guy who invented the
+term VIP coding. Plus, he has
+contributed a lot to the open-source
+community, especially in AI. And yes,
+most importantly, he was born in
+Czechoslovakia. However, this video is
+about one of his contributions and that
+is auto research. Karpathi had a
+training script for the GPD2 model that
+he's been optimizing for many months.
+And then he realized why am I doing
+this? Why not just have an AI agent run
+different experiments in a loop to
+figure out what's the best way to
+optimize this model? And this is the
+core idea. Give AI one file, one metric,
+and let it run hundreds if not thousands
+of experiments by itself while you sleep
+and watch it improve. And yes, at the
+end of the video, I'll show you how you
+can build your first order research
+loop. And yes, you can do this even if
+you are a complete beginner. Now, let's
+talk about the prepare. py file because
+it's essential to understand this. The
+agent cannot touch prepare. So that it
+can't cheat the eal you set for it.
+Without this limitation, it could
+rewrite the scoring function to fake its
+results. So basically, the prepare py
+file defines what better means. Now, of
+course, if you set the wrong metric,
+you'll get the wrong results. So here's
+a nice graphic that visualizes the loop.
+First the agent comes up with a
+hypothesis, right? A theory of what it's
+going to improve, what experiment it
+could run. Then it modifies the code.
+You train it for around 5 minutes. Then
+it runs the evaluation to see if it's
+good or if it's not good. If it wants to
+keep it, it will just commit it to your
+git history. If it's bad and if it
+worsens the results, it will do git
+reset and repeat the whole loop over and
+over and over as many times as you want.
+you know [laughter] depending on how
+many dollars you want to spend or tokens
+and yeah this is auto research basically
+in a single image. So if you start it
+right before going to bed it can run
+roughly 100 experiments overnight. Now
+by giving it a fixed time budget you
+make every experiment directly
+comparable because let's say you're
+hiring for your company. If you have one
+applicant and we give him seven days to
+complete a task and the other one only
+has seven minutes then obviously the one
+who does seven days on average will do
+better. So you want to make sure this is
+the same in AI agents. That way the
+agent can't cheat just by training
+longer or by training better ideas. Only
+the raw idea wins with the same time
+allocated. But if you think that order
+research only applies to the training of
+AI models, you are badly mistaken. This
+has massive implications across every
+domain of your life or business. You can
+build a recursive self-improving loop
+for nearly anything that can be
+measured. Thanks to AI agents, soon
+enough the execution of any work or task
+will become basically free. However,
+what will become valuable is knowing
+what to measure, picking the right
+metric, and setting the right
+constraints. This is the skill that is
+going to make millionaires in the
+future. And by the way, this is the
+clearest example of what AI agents
+actually look like in practice. Not just
+chat bots, but real autonomous loops
+that do meaningful work for companies or
+individuals. And if you reason about the
+state of AI from first principles, you
+realize that this has been the end goal
+all along. Andre Karpathy predicts that
+all LLM frontier labs will do this. They
+will run some sort of auto research.
+This is the final boss battle. And if
+you think about it, this is literally
+what [clears throat] recursive
+self-improvement will look like. And the
+funny thing is that right now the AI
+labs like OpenAI Enthropic Gemini are
+spending tens of millions of dollars on
+researchers, all of which are trying to
+build this. Yet Karpafei made it
+completely open source. Now to
+understand order research, you must
+understand its free file architecture.
+First you have program.mmd. This is the
+most important file. This is the human
+setting the goal, the constraints and
+the rules for the agent. Then you have
+the train. py file. This is the one file
+that the agent can actually change. And
+this could be anything by the way. Code,
+some config, a prompt, some math
+equation, literally anything you want to
+optimize. And then you have prepared.
+py. This is the metric and the
+evaluation script. The agent cannot
+touch this. Absolutely never. Because
+this is what measures the result. And by
+the way, there are several tech
+billionaires who are going crazy over
+this such as the CEO of Shopify and the
+CEO of Stripe because these guys realize
+that this is not just about training AI
+models. And this is perhaps the biggest
+misconception about auto research.
+People think that it's just about
+optimizing of machine learning, right?
+Because this is what Karpathi used as
+example. But if you actually pay
+attention and if you think about it a
+little bit more, you realize that as
+long as you have a clear metric and you
+can run these experiments, this could be
+used in so many different ways in
+marketing, in business, in testing new
+products, in trading strategies, in
+personal life, in weather forecast,
+literally hundreds of possible domains.
+You can build these auto research loops
+that don't have any human in the loop,
+but instead swarm of AI agents running
+experiments, discarding what doesn't
+work, and keeping what works. And as
+Kafi says here, we might be in the early
+stages of the singularity. Now, every AI
+workflow has the same bottleneck,
+getting fresh real world data. You can
+build the most sophisticated AI agent,
+but if it can't see what's actually on
+the web right now, it's flying blind.
+That's where Oxyabs comes in. The Oxyabs
+web scraper API lets you pull structured
+data from basically any website. This
+could be Amazon product listings, Google
+search results, real estate listings,
+all through a single API call. It
+handles proxy rotation, capture solving,
+and JavaScript rendering, so you don't
+have to do that yourself. But here's
+what makes it interesting for us AI
+developers. Oxyabs has an official MCP
+that you can connect directly to cursor
+or cloth code in a matter of a minute,
+so that your AI agent gets live web
+scraping superpowers. Say you need to
+pull competitors pricing or scrape
+search results or grab real estate
+listings. Just ask it in plain English.
+The agent calls OxyLabs, gets structured
+data back, and reasons over it. And even
+if you aren't a developer, OxyLabs plugs
+straight into NA10. You can visually
+build a workflow that scrapes Amazon
+prices, sends them to an AI, and spits
+out insights with zero code written by
+you. And the best part is Oxyabs gives
+up to 2,000 scrape results for free, so
+you can test it yourself. So go to
+oxyabs.io/david
+for a free trial. Oh, and there is no
+credit card required. And if you run out
+of credits, use my code David for 20%
+off all Oxyab plans. And thank you to
+OxyLabs for sponsoring this video.
+Again, I need to stress auto research is
+not just for machine learning. This
+pattern works anywhere you can measure
+an outcome, a clear outcome. And Kathy
+said this himself. Any metric you care
+about that is reasonably efficient to
+evaluate can be auto researched. So you
+need one file to edit, one scalar
+metric, and a time box loop. If you can
+score it, you can auto research it. Now
+let's look at some practical valuable
+use cases. First off, trading. You can
+take the same order research loop, but
+instead of improving an AI model, you
+can point it on a trading strategy. The
+agent tweaks your buy sell rules, tries
+experiments based on years of market
+data, and scores each experiment by its
+sharp ratio, which is basically how good
+are the returns to the risk. And it can
+test hundreds of different trading
+strategies to see which one has the best
+returns. Here's another use case,
+marketing. You can now apply auto
+research to marketing with emails, ad
+creatives, landing pages, automated AB
+tests, headlines, thumbnails, YouTube
+titles, any type of marketing. Eric Sue
+put it the best. Most marketing teams
+run 30 experiments per year. The next
+generation will run 36,000,
+aka roughly 100 per day. The agent will
+modify the copy and measure the
+conversions and decide whether to keep
+this experiment or to discard it. The
+exact same loop as before. Now before I
+show you more use cases how auto
+research can benefit your life, please
+consider subscribing. 25% of you are
+subscribed which means the vast majority
+of you watching right now are not
+subscribed. So if you want to see more
+highquality AI content in your YouTube
+recommended, please take two seconds, go
+below the video and click the subscribe
+button. It helps out more than you
+think. So to all of you who just
+subscribed, thank you. The next use case
+is for developers. You can point auto
+research at basically any codebase and
+say make it faster. And people are also
+using auto research to fine-tune open
+source AI models so they run faster
+locally on your laptop or phone. So
+expect in the next 6 months insane
+breakthroughs in terms of what is
+possible to run on phone. I would even
+say that we will have Sonet 4.6 quality
+models runningable on iPhones in three
+or four months. This is a prediction.
+Let's see if it's correct. Another use
+case is prompt engineering. Auto
+research can fine-tune the system
+instructions behind all of your AI
+agents. So Harrison Chase, the founder
+of Langchain, which is a billiond dollar
+company, said agents mess up because
+they don't have the right context and
+system prompts are part of that context.
+So order research can find new ways to
+phrase things, better language, maybe
+even different language, you know, maybe
+instead of English, it can use Polish or
+Czech or German, whatever. It can try
+different levels like beginner, you
+know, college level, PhD level to see
+which prompt works the best for all of
+your AI agents. So these are the three
+conditions that decide whether your auto
+research loop will be successful or will
+be a failure. Number one, a clear
+metric. One number, a clear direction
+you want to go in. And number two, an
+automated evaluation where there isn't a
+human in the loop. Right? If you, the
+human, need to be in the loop, it will
+be so slow and it will not be auto
+research. Sure, it still can be
+research, but it will not be auto
+research. It will not be running while
+you sleep. And number three, there's one
+file that the agent can change. Not two,
+not zero, one file. And you need all of
+these three conditions for auto research
+to work. Now, here's where auto research
+will fail. Brand design, UX, pricing,
+anything where better is subjective.
+Now, for example, in pricing, you could
+have it succeed if you have a large
+volume of traffic to your pricing page
+and you can quickly AB test different
+pricing to see highest cash collected.
+But for most businesses, it will not be
+effective, right? Because the quality of
+that makes better is subjective or the
+loop is too slow. The loop needs
+objective metric. If the success is a
+judgment call or a feeling, the agent
+cannot tell what's working. So, it will
+optimize in a random direction. Also, I
+want to stress this again. If you give
+it a bad metric, it will very
+confidently optimize the wrong thing. So
+here's Arj Karpathi's end vision. In the
+early 2000s, there was a project set at
+home that let anyone donate their spare
+computer power to research for alien
+life. And Arj Karpathi wants to do the
+same model, the same idea, but for AI
+research where we have millions of AI
+agents distributed across thousands of
+computers and you can actually allocate
+where that research goes towards. All
+right, so now let me show you how to
+actually build your own order research
+loop from scratch. Even if you're a
+complete beginner, just stick with me
+for the next five minutes and you'll be
+ahead of 99.9% of people in AI who just
+pay GBT subscription and they think
+they're advanced. They cannot even dream
+about having their own auto research.
+But you are like a couple of steps away
+from having that. So log in. So first of
+all, this is the GitHub repo. I'm going
+to link it below the video. This is the
+auto research repository from Karpathy.
+I'm going to start it as well because
+it's a great project. Now, if you are
+not familiar with GitHub, you don't need
+to panic. You don't need to understand
+much. This is just a way to store code.
+Okay? Efficient way to store coding
+projects. That's all you need to
+understand. You don't need to be a Git
+expert, nothing like that. All we need
+to do is click here on the code and
+click copy here. That's it. Next, you
+need an IDE. So, either VS Code or
+cursor. I'm going to be using cursor
+here. Just install an ID of some sort.
+And we're going to use a coding agent.
+I'm going to use cloth code. So, I'm
+going to open an empty project here.
+Boom. Nothing in here. You can see on
+the right, no files. And I'm going to
+launch cloth dangerously skip
+permissions. Boom. Enter. So, here it
+is. CL code. Now, I'm going to say
+create a new folder/or original in our
+repo root level and in there clone this
+GitHub repository. Boom. Paste it in.
+And again, Cloudcore will know what to
+do exactly. So we will figure out okay
+everything is empty and then it created
+original folder and clone it in there.
+Now why did I want to do it? Well
+because I want to create a separate
+folder where we're going to build
+something with auto research for us but
+I also want to keep the original
+repository here so that we can use it as
+a reference. Next I'm going to say now
+create slash website folder root level
+and in there build the following project
+XML text boom project. So I have
+described a clear vision for a simple
+web app and what I'm want to show you is
+how you can use auto research to
+optimize any website you have right
+whether it's a personal website whether
+it's your AI startup any type of website
+to optimize the loading times or
+anything else that you can measure but
+loading loading times are very easy to
+measure so they're a great candidate for
+an auto research loop so I'm just having
+cloth code with bypass all permissions
+build this so that we can uh build our
+own auto research loop and in fact while
+this is running let me launch a Codeex
+in YOLO mode. Boom. Let me put it here.
+So, I'm going to rename it so it's clear
+for you guys what it's what. Codeex CLI.
+GBD 5.4 is actually really good at u
+fixing and debugging, but cloth code
+with Opus 4.6 is really incredible to
+work with, especially with fast mode. I
+know it costs a lot of money if you do
+slashfast, but I highly recommend it.
+And I also highly recommend it inside of
+u Codex. And keep it on high. Extra high
+is usually overkill. So, for codex, I'm
+going to say create a benchmark. MGS
+file inside of / original folder where
+it makes sense. Going to give it the
+eval instructions. Hand hit enter. Okay.
+Actually, first I'm going to say read
+the structure of the actually that's my
+bad. It should be in the website here
+website folder not original because uh
+it should read the original which was
+the original repo by Karpathi to
+understand where the evil script should
+be. Boom. So this is going to use
+Puppeteer to test the speed locally of
+this website. Um it we should have the
+project running on local 3000. Let me
+see. So basically I asked it to create a
+simple portfolio website with express
+and static files. So let's see what it
+built. Uh here's what it looks like.
+Alex Morgan. Uh just a simple portfolio
+website. Like you could see this
+literally like 10 15 years ago. Every
+website looked like this, right?
+Everybody who like is new to HTML and
+CSS would have stuff like this in high
+school and think they're the best
+website designer. I'm guilty of that as
+well. But anyways, let's uh see whether
+Codex finished this. Okay, it did. So,
+we have the setup. So, now let's
+understand the repo, right? Remember
+there are the three main files program
+MD, train py, and prepare. py. So, the
+original programm looks like this from
+Karpathy and he wrote this himself and
+this is a very u useful instruction by
+the way. Feel free to steal this prompt
+into many of your agentic projects where
+you want the agent to keep going forever
+or as close to forever as possible, but
+we need to kind of write our own. Okay,
+so let's go back into cloud code and I'm
+going to tell it what to do to see the
+into the website folder and to install
+puppeteer and run this uh baseline
+script. We're [clears throat] going to
+benchmark our website of our uh expert
+Alex Morgan portfolio designer to see
+how fast or slow this is and then we're
+going to run auto research to optimize
+the living out of it. Okay. Okay. Let's
+see. Okay, we have the results. So,
+Puppeteer ran and it closed the Chrome
+faster than I could see it or ran it in
+the background. But basically, we have
+the medium load time 50 ms uh which is
+uh not that bad. So, we'll see whether
+auto research can can optimize this.
+Okay. So now the most important part of
+any auto research loop is the
+program.md. So I'm going to go into our
+website folder create a new file
+program.md and u this is the main file
+and actually we can use u inspiration
+from karpathy say like so read the
+programm inside of / original and then
+build our new website/program.md
+file on top of that but relevant to our
+website speed benchmarking auto research
+objective. Okay, so we're going to
+borrow Andre Kafis from engineering that
+he optimized quite heavily for his own
+project and we're going to have clot
+code rewrite that into our own programm
+which is going to be relevant to our own
+project. So again feel free to steal
+this for whatever you want any business
+use case any marketing use case any make
+money use case anything where there's a
+clear metric you can create your own
+programm and boom just like that I use
+cloth code to write 128 lines of
+instructions and to adapt it to this
+project. So now the programm is highly
+relevant to this specific project. Okay.
+So I'm going to say do this next. Give
+it a clear instruction of what I want
+cloud code to do to um stage this commit
+this as a baseline. So remember if an
+experiment is successful it commits the
+result into history tweak. If it's not
+it does git reset and try something
+else. Now I'm going to say read program.
+MD run baseline benchmark first. Record
+results tsv then begin the experiment
+loop. Do not stop or ask me anything.
+Just keep running experiments
+autonomously. And there we go. We have
+our first auto research loop running. Uh
+maybe I could have created a separate uh
+agent, you know, separate cloth coder
+codex. And obviously you can try
+different agents and see which you know
+which one performs the best. But uh as
+you can see it's not so look slightly
+worse. Looks like noise. Let me rerun to
+confirm. Still worse. Following protocol
+revert. Okay. Amazing. So it ran an
+experiment and the speed of the website
+was worse. So it's going to try
+something else. And this is the whole
+point of auto research. I'm not doing
+anything. My hands are up. And even if I
+was doing this, first of all, I would
+need to be a solid front-end developer.
+And second of all, I couldn't do it so
+quickly, right? So, even if you are a
+great front end developer and you know
+how to optimize websites, you're still
+Okay, now it found an improvement.
+You're still not going to beat an AI
+agent that can generate hundreds of
+tokens per second. So, it found an
+improvement. Look at it. 33 milliseconds
+instead of 50. So, we're already down
+34% in a matter of less than a minute.
+This is the power of our research. Okay.
+And look at this. Another one. 28
+milliseconds. Another 15% improvement in
+a matter of 2 or 3 minutes, guys. Yeah,
+auto research is insane and I have a
+feeling that this is not the last video
+I'm going to make on auto research. So
+again, if you want me to make more
+content on auto research, make sure to
+subscribe. And if you are someone who's
+building his own AI startup, you want to
+build a real AI business, then listen up
+because in my accelerator, we work
+closely with a handful of founders for 6
+months to help them scale aggressively.
+And in fact, for the rest of March, we
+are offering free idea validation calls.
+So, if you have an AI app you want to
+build and you want to turn it into a
+real profitable business, then make sure
+to click the second link in the
+description, which will take you to the
+landing page to see if you qualify for a
+free idea validation call. But again,
+this is only for serious founders who
+actually want to build a real AI
+business. That being said, thank you
+guys for watching. I'm going to let this
+auto research loop run for a bit. We're
+already on 25 milliseconds. That's
+crazy. Already half in a matter of four
+minutes. Let's see where this gets. And
+uh yeah, I'm going to update you on
+Twitter, so make sure to follow me on
+Twitter and have a great productive

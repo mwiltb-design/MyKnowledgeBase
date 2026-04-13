@@ -1,39 +1,28 @@
-Quantization is a critical technique for running massive Large Language Models on consumer-grade hardware by reducing the numerical precision of the model's weights. By compressing full 32-bit floats into formats like 8-bit or 4-bit integers, quantization drastically lowers VRAM requirements, often by a factor of four, without significantly compromising the model's reasoning capabilities. This process is essential for local execution of state-of-the-art models like [[Gemma-4]] and is a key component in efficient [[LLM-Fine-Tuning]] workflows, enabling advanced AI to run on everything from mobile devices to desktop GPUs.
+Source: [[Gemma_4_Technical_Analysis.md]]
 
-# Visual Guide to Quantization
+# Quantization
 
-Quantization allows for the compression of weight matrices by mapping high-precision floating-point numbers to a smaller set of discrete values, significantly reducing the memory footprint.
+## Summary
+A guide to quantization techniques that reduce AI model precision to save VRAM, with specific standards for 2026 local deployment.
 
-## Numerical Precision Levels
-- **FP32 (32-bit):** 4 bytes per weight (highest precision).
-- **FP16 (16-bit):** 2 bytes per weight (standard for training).
-- **INT8 (8-bit):** 1 byte per weight.
-- **INT4 (4-bit):** 0.5 bytes per weight.
+- Definition: Reducing bit-precision of model weights to lower memory requirements with minimal accuracy loss.
+- Precision Levels:
+    - **BF16**: 2 bytes/weight (Mac Studio/Workstation baseline).
+    - **INT8 (Q8_0)**: 1 byte/weight.
+    - **INT4 (Q4_K_M)**: **0.5 bytes/weight** (Standard for mobile/IoT).
+- Memory Formula: **GB = (Parameters × Bits) / 8**.
 
-## Memory Formula
-Memory (GB) = (Parameters × Bits per weight) / (8 × 1024³)
+## Gemma 4 Requirements (4-bit Q4)
+- **E2B**: **4 GB - 5 GB** (Target: Mid-range Android, Pi 5).
+- **E4B**: **5.5 GB - 6 GB** (Target: Flagship Phones, Laptops).
+- **31B**: **17.4 GB**.
+- **26B A4B (MoE)**: **15.6 GB**.
 
-## Popular Quantization Formats
-### GGUF (llama.cpp)
-A portable container format supporting metadata and diverse quantization methods:
-- **K-Quants:** Layer-aware quantization (e.g., Q4_K_M).
-- **IQ-Quants:** Importance-matrix guided quantization.
+## Industry Standards (2026)
+- **GGUF**: The universal standard for CPU/GPU inference (Ollama, LM Studio).
+- **MLX**: Optimized format for Apple Silicon unified memory.
+- **SFP8**: High-throughput inference for data-center scale.
+- **BitNet b1.58**: Ternary weight frontier.
 
-### GPU-Optimized Formats
-- **GPTQ:** Calibration-based for NVIDIA GPUs.
-- **AWQ:** Activation-aware weight quantization.
-- **EXL2:** High-performance mixed-precision specialist.
-
-## Hardware VRAM Requirements
-| VRAM | Models That Fit Fully |
-| :--- | :--- |
-| 6 GB | 7-8B (Q4_K_M) |
-| 12 GB | 13-14B (Q4_K_M) |
-| 24 GB | 34B (Q4_K_M), 70B (Q2_K) |
-| 48 GB | 70-72B (Q4_K_M) |
-
-## Important Considerations
-While quantization is highly effective for inference, it should be avoided for:
-- **Legal/Medical/Compliance Tasks:** Where precision is critical.
-- **Embedding Generation:** Sensitive to precision loss.
-- **[[LLM-Fine-Tuning]] Workflows:** For best results, run inference at the same precision used during fine-tuning.
+---
+**See also:** [[MatFormer]], [[Gemma 4]].
