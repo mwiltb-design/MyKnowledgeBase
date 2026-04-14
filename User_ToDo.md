@@ -7,17 +7,6 @@
 - **Update Rule**: When a task is finished, change `[ ]` to `[x]` and move it to the "Completed" section if it gets too long.
 
 ## Active Tasks
-- [ ] **A2UI Implementation: Subject Map** (High)
-  - [ ] Define `A2UI_Catalog.json` for Wiki components (Card, Summary, Link).
-  - [ ] Implement "Adjacency List" output format for Wiki navigation.
-  - [ ] Test "Intent-based" navigation (instead of script-based loops).
-- [ ] **Integrated Skill: Wiki Architect** (Medium)
-  - [ ] Create `SKILL.md` for automated indexing and contradiction checking.
-  - [ ] Replace `simple_agent.py` logic with integrated `read_file` and `grep_search` patterns.
-- [ ] **Integrated Skill: Business Strategist** (Low)
-  - [ ] Create `SKILL.md` focused on RV Park & Stone Masonry research synthesis.
-- [ ] **Integrated Skill: Health Synthesis** (Low)
-  - [ ] Create `SKILL.md` for factual health logging and study tracking.
 
 ## Completed Tasks
 - [x] Pull latest changes from GitHub

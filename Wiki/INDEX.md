@@ -32,6 +32,13 @@ Welcome to the **LLM-Managed Knowledge Base**, a persistent knowledge substrate 
 - **[[RLVR]]**: Reinforcement Learning for Verified Rewards (Optimization).
 - **[[Quantization]]**: VRAM requirements and model compression formats (GGUF, MLX).
 
+## Space Exploration & Infrastructure
+- **[[Moon Base Architecture]]**: Phased implementation of the Lunar South Pole outpost.
+- **[[Space Nuclear Initiative]]**: The NSTM-3 mandate for 2030 nuclear superiority.
+- **[[Nuclear Space Power]]**: Fission Surface Power (20 kWe+) and night survival.
+- **[[Nuclear Thermal Propulsion]]**: High-thrust engines for Mars transit.
+- **[[Lunar Logistics and Robotics]]**: CLPS scaling and autonomous surface operations.
+
 ## RV Park Management
 - **[[RV Park Digital Strategy]]**: UX, Conversion, and Architecture.
 - **[[RV Park Operations 2026]]**: Automation, Dynamic Pricing, and High-Yield Units.

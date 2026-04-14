@@ -1,24 +1,23 @@
-# Wiki Health Report: 2026-04-12 (Post-Agent Batch)
+# Wiki Audit Report (LINT)
 
-## Broken Links (Stubs to Create)
-- **[[Vercel AI SDK]]**: Linked in `OpenRouter.md`.
-- **[[Claude-3.7]]**: Linked in `OpenRouter.md` and `Pi-Coding-Agent.md`.
-- **[[TypeScript]]**: Linked in `Pi-Coding-Agent.md`.
-- **[[SQLite]]**: Linked in `Hermes-Agent.md` (specifically for FTS5 search).
-- **[[Honcho]]**: Linked in `Hermes-Agent.md` (User modeling).
-- **[[Ollama]]**: Linked in `Pi-Coding-Agent.md` and `Hermes-Agent.md`.
+## Summary
+- **Total Articles**: 40
+- **New Links Verified**: 3 (Moon Base ecosystem)
+- **Status**: **HEALTHY** (with 2 minor stub issues)
 
-## Orphan Pages
-- **None**. All 32 files are correctly indexed or cross-linked within their respective domains.
+## Broken / Missing Links (Stubs)
+The following articles are linked in the `[[INDEX]]` but do not have corresponding `.md` files in the `./Wiki/` folder:
+1. **[[ACP Mode]]**: Mentioned in 'Agentic Tools' but file is missing.
+2. **[[MatFormer]]**: Mentioned in 'Technical Domains' but file name on disk is `MatFormer.md` (Check for case sensitivity/hyphenation).
 
-## Formatting & Consistency
-- **Source Tracking**: **PASS**. All new technical pages include the mandatory `Source: [[Filename]]` header.
-- **Summary Headers**: **PASS**. All pages follow the `## Summary` standard.
-- **Bolding**: **PASS**. Technical specs (e.g., **128K context**, **AdamW**, **Q4_0**) are correctly bolded.
+## Orphaned Files
+*No orphaned files detected.* All files in `./Wiki/` are correctly referenced in the `[[INDEX]]`.
 
-## Critical Structural Recommendations
-1. **Create [[Ollama.md]]**: This is now a core dependency for local inference mentioned in 4+ files.
-2. **Standardize Page Naming**: `Pi Coding Agent.md` and `Hermes Agent.md` use spaces, but `RV-Park-Digital-Strategy.md` uses hyphens. Recommendation: Standardize on **Space-delimited** names as per current `INDEX.md` convention.
+## Structural Issues
+- **Hyphenation Inconsistency**: Most files use PascalCase with spaces (e.g., `Andrej Karpathy.md`), but the new Moon Base files use hyphens (`Moon-Base-Architecture.md`). 
+- **Recommendation**: To maintain consistency, either switch space-based names to hyphens or vice-versa. (PascalCase with spaces is the current dominant style in your Wiki).
 
-## Health Summary
-The Wiki has doubled in size but remains structurally sound. The "Building Block" approach is working, but the high number of broken links to core tools (Ollama, Claude, etc.) needs immediate attention to maintain the depth of the "Second Brain."
+## Health Check: Space Infrastructure
+- **[[Moon-Base-Architecture]]** -> OK (Linked to Index)
+- **[[Nuclear-Space-Power]]** -> OK (Linked to Index)
+- **[[Lunar-Logistics-and-Robotics]]** -> OK (Linked to Index)
