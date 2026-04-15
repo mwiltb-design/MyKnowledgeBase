@@ -18,7 +18,24 @@ The **Key-Value (KV) Cache** is the "short-term memory" of a Transformer.
 - **Formula**: Memory (GB) = (Parameters × Bits) / 8.
 - **Optimization**: Techniques like **Multi-Query Attention (MQA)** and **Quantization** (INT8/FP8) are used to shrink the KV cache footprint, enabling longer context windows on limited hardware like the **[[Gemma 4]]** models.
 
+## Long-Term Storage & Retrieval
+Efficient AI agents utilize a hybrid approach for persistence beyond the context window:
+
+### 1. Relational Backends (Exact Retrieval)
+- **[[SQLite]]**: Ideal for in-process agent state, conversation logs, and metadata.
+- **[[PostgreSQL]]**: Used for production-scale deployments requiring high concurrency and complex data integrity.
+- **[[PocketBase]]**: A single-binary solution for rapid backend development.
+
+### 2. Vector Databases (Semantic Retrieval)
+- **[[LanceDB]]**: An embedded, local-first vector store for fast RAG and embedding management.
+- **[[Qdrant]]**: A high-performance similarity search engine written in Rust for production-grade retrieval.
+
+### 3. Analytical Engines
+- **[[DuckDB]]**: Utilized for calculating scalar metrics and analyzing long-term research logs.
+
 ## See Also
 - **[[Quantization]]**: Model compression techniques.
 - **[[MemGPT]]**: Virtual context management.
 - **[[GraphRAG]]**: Relational memory structures.
+- **[[SQLite]]**: Persistent storage layer.
+- **[[LanceDB]]**: Local-first vector storage.

@@ -58,7 +58,6 @@ Welcome to the **LLM-Managed Knowledge Base**, a persistent knowledge substrate 
 - **[[Hugging Face]]**: Model repository, datasets, and interactive demos.
 
 ## Infrastructure & Memory
-- **[[SQLite]]**: Persistent storage layer for agent state (FTS5).
 - **[[Honcho]]**: Dialectic user modeling and profile persistence.
 
 ## Maintenance

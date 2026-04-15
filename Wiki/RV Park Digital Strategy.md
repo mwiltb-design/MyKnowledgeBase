@@ -15,5 +15,11 @@ Source: [[RV_Park_Designer_Selection.md]], [[RV_Park_Conversion_Design.md]], [[R
 - **Navigation**: Persistent, non-moving mobile navigation to prevent "bounce" on small screens.
 - **GPS Integration**: Mandatory inclusion of precise coordinates for specialized RV GPS units.
 
+## Tech Stack 2026
+- **Frontend**: React (TypeScript) or Compose Multiplatform for cross-device consistency.
+- **Backend**: **[[PocketBase]]** (Recommended).
+  - **Why**: Single-binary deployment, embedded **[[SQLite]]**, and built-in Auth/File storage are ideal for independent RV park operations with low transactional volume (~60/mo).
+- **Search**: **[[RV Park Local SEO]]** is the primary driver; site search should focus on availability and amenities.
+
 ---
-**See also:** [[A2UI]], [[RV-Park-Local-SEO]].
+**See also:** [[PocketBase]], [[RV Park Operations 2026]], [[RV Park Local SEO]], [[A2UI]].

@@ -1,20 +1,39 @@
-# Wiki Integration Plan: Space Nuclear Initiative (NSTM-3)
+# Knowledge Architect Plan: Database Ecosystem Update
+
+## Overview
+This plan integrates foundational database technologies into the Wiki to support both **AI Agent Memory** and the upcoming **RV Park Management** project.
 
 ## New Pages
-- [x] **Space Nuclear Initiative**: Overview of the presidential mandate (NSTM-3) and the 2030/2031 timeline for orbital and surface reactors.
-  - Source: [[NSTM-3-2026_04_14-corrected.pdf]]
-- [x] **Nuclear Thermal Propulsion**: Details on **NTP** vs **NEP** funding allocation, focus on high-temperature fuels and radiation-hardened instrumentation.
-  - Source: [[NSTM-3-2026_04_14-corrected.pdf]]
+- [x] **[[PostgreSQL]]**: Comprehensive guide on the "Object-Relational" standard, focusing on extensibility (JSONB) and GIS.
+  - Source: [[PostgreSQL_Official_About.md]]
+- [x] **[[PocketBase]]**: Detailed overview of the "All-in-One" backend solution for rapid development.
+  - **High Priority** for RV Park Website.
+  - Source: [[PocketBase_Official_Intro.md]]
+- [x] **[[DuckDB]]**: Introduction to "In-process Analytical SQL" for fast data processing and local-first analytics.
+  - Source: [[DuckDB_Official_Why.md]]
+- [x] **[[LanceDB]]**: Guide to the embedded vector database for AI agents and RAG.
+  - Source: [[LanceDB_Official_Overview.md]]
+- [x] **[[Qdrant]]**: Overview of the Rust-based vector similarity search engine for production-grade AI.
+  - Source: [[Qdrant_Official_Overview.md]]
 
 ## Updates to Existing
-- [x] **Nuclear Space Power**: Merge specific NSTM-3 targets (**20 kWe** for mid-power, **100 kWe** for high-power, and the **2030/2031** launch dates).
-  - Source: [[NSTM-3-2026_04_14-corrected.pdf]]
-- [x] **Moon Base Architecture**: Add the **National Initiative** as a primary driver and strategic policy framework.
-  - Source: [[NSTM-3-2026_04_14-corrected.pdf]]
+- [x] **[[SQLite]]**: Expand from a "lightweight layer" to a "Full-featured SQL engine," including its role as a serverless application file format.
+  - Source: [[SQLite_Official_About.md]]
+- [x] **[[AI Memory]]**: Add sections on **Vector Databases** (LanceDB, Qdrant) and **Relational Backends** (PostgreSQL) for long-term agent state.
+- [x] **[[RV Park Digital Strategy]]**: Link to **[[PocketBase]]** as the recommended technical stack for the 2026 website implementation.
+- [x] **[[INDEX.md]]**:
+  - Create a new category: **## Database & Storage Systems**.
+  - Move [[SQLite]] under this category.
+  - Add links to [[PostgreSQL]], [[PocketBase]], [[DuckDB]], [[LanceDB]], and [[Qdrant]].
+
+## Link Mapping (Cross-Pollination)
+- [x] **[[PostgreSQL]]** <-> **[[LanceDB]]**: Compare "Embedded" vs. "Server-side" for vector storage.
+- [x] **[[PocketBase]]** <-> **[[SQLite]]**: Explain how PocketBase leverages SQLite for its portable backend.
+- [x] **[[DuckDB]]** <-> **[[Metric Definition]]**: How DuckDB can be used to calculate scalar metrics from raw research logs.
+- [x] **[[AI Memory]]** <-> **[[Vector Databases]]**: Deep dive into semantic similarity vs. exact SQL retrieval.
 
 ## Conflicts to Resolve
-- [x] **Power Targets**: The previous guide mentioned **5 kW** for Phase 1; the new NSTM-3 mandate raises the bar to **20 kWe** for mid-power surface fission by 2030. Resolve as a target upgrade.
+- **None Identified**: The new data complements existing notes without contradiction.
 
-## Link Mapping
-- `Space Nuclear Initiative` links to `[[Nuclear Space Power]]` and `[[Nuclear Thermal Propulsion]]`.
-- New pages will be categorized under "Space Exploration & Infrastructure" in the `[[INDEX]]`.
+---
+**Next Step**: Task Complete.
