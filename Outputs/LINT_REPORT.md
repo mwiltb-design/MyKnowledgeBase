@@ -1,23 +1,34 @@
 # Wiki Audit Report (LINT)
 
 ## Summary
-- **Total Articles**: 40
-- **New Links Verified**: 3 (Moon Base ecosystem)
-- **Status**: **HEALTHY** (with 2 minor stub issues)
+- **Total Articles**: 50
+- **Status**: **STRUCTURAL FAILURE** (Formatting and link issues detected)
 
 ## Broken / Missing Links (Stubs)
-The following articles are linked in the `[[INDEX]]` but do not have corresponding `.md` files in the `./Wiki/` folder:
-1. **[[ACP Mode]]**: Mentioned in 'Agentic Tools' but file is missing.
-2. **[[MatFormer]]**: Mentioned in 'Technical Domains' but file name on disk is `MatFormer.md` (Check for case sensitivity/hyphenation).
+- **[[TypeScript]]**: Linked in `Vercel AI SDK.md` but file is missing.
+- **[[Modelfile]]**: Linked in `Ollama.md` but file is missing.
+- **[[RV-Park-Infrastructure]]**: Formatting error in `RV Park Operations 2026.md`.
+- **[[RV-Park-Operations-2026]]**: Formatting error in `RV Park Infrastructure.md`.
+- **[[Ollama.md]]**, **[[Vercel AI SDK.md]]**, etc.: Invalid links in `LOG.md` (extension included).
 
 ## Orphaned Files
-*No orphaned files detected.* All files in `./Wiki/` are correctly referenced in the `[[INDEX]]`.
+The following files are present in `./Wiki/` but are NOT linked in `INDEX.md`:
+1. **[[ACP Mode]]**
+2. **[[DuckDB]]**
+3. **[[LanceDB]]**
+4. **[[PocketBase]]** (Linked from other pages, but missing from Index)
+5. **[[PostgreSQL]]** (Linked from other pages, but missing from Index)
+6. **[[Qdrant]]** (Linked from other pages, but missing from Index)
+7. **[[SQLite]]** (Linked from other pages, but missing from Index)
 
-## Structural Issues
-- **Hyphenation Inconsistency**: Most files use PascalCase with spaces (e.g., `Andrej Karpathy.md`), but the new Moon Base files use hyphens (`Moon-Base-Architecture.md`). 
-- **Recommendation**: To maintain consistency, either switch space-based names to hyphens or vice-versa. (PascalCase with spaces is the current dominant style in your Wiki).
+## Formatting & Synthesis Issues
+- **[[Subagents]]**: Page is a raw dump of an announcement. Missing `## Summary` and proper Wiki structure.
+- **Source Links**: Multiple pages use `[[Vault_File.md]]` style links. These should be clarified as sources or converted to Wiki links if relevant.
 
-## Health Check: Space Infrastructure
-- **[[Moon-Base-Architecture]]** -> OK (Linked to Index)
-- **[[Nuclear-Space-Power]]** -> OK (Linked to Index)
-- **[[Lunar-Logistics-and-Robotics]]** -> OK (Linked to Index)
+## Contradiction Detection
+- **Gemma 4**: Released date (April 2, 2026) confirmed across Vault and Wiki. No metric conflicts found.
+
+## Critical Actions
+- **Bold** formatting check: Most pages follow rules, but `Subagents.md` is non-compliant.
+- **Index Update**: Add missing Technical Domains (Databases).
+- **Link Repair**: Fix hyphenated wikilinks and remove extensions from `LOG.md`.

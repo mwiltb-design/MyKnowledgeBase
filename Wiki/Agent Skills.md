@@ -4,8 +4,8 @@ Source: [[Pi_Coding_Agent_Technical_Research.md]], [[Hermes_Agent_Technical_Rese
 
 ## Summary
 - Modular capabilities that extend the functionality of autonomous agents for research and data processing.
+- Can be activated within a primary session or delegated to specialized **[[Subagents]]** for isolated, expert execution.
 - Combines **Declarative Skills** (pre-written instructions) with **Procedural Skills** (autonomously learned sequences).
-- Supports dynamic loading and cross-platform execution via **[[MCP]]** and dedicated SDKs.
 
 ## Implementation Patterns
 - **Markdown-based (Pi)**: Capability packages defined in `SKILL.md` files that provide structured logic and tool-use instructions.
@@ -19,8 +19,8 @@ Source: [[Pi_Coding_Agent_Technical_Research.md]], [[Hermes_Agent_Technical_Rese
 - **Synthesis**: Automated data extraction and Wiki propagation.
 
 ## Management
-- **Persistence**: Skills reside in `~/.pi/agent/skills/` or `~/.hermes/skills/`.
-- **Orchestration**: Agents can dynamically select and invoke skills based on current mission goals.
+- **Persistence**: Skills reside in `~/.pi/agent/skills/` or `~/.gemini/skills/`.
+- **Orchestration**: Agents can dynamically select skills or delegate tasks to **[[Subagents]]** using the `@agent` syntax.
 
 ---
 **See also:** [[Pi Coding Agent]], [[Hermes Agent]], [[MCP]].

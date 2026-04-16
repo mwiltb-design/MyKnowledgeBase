@@ -1,39 +1,18 @@
-# Knowledge Architect Plan: Database Ecosystem Update
-
-## Overview
-This plan integrates foundational database technologies into the Wiki to support both **AI Agent Memory** and the upcoming **RV Park Management** project.
+# WIKI UPDATE PLAN: Subagents in Gemini CLI
+**Source**: [[Subagents_Announcement_April2026.md]]
 
 ## New Pages
-- [x] **[[PostgreSQL]]**: Comprehensive guide on the "Object-Relational" standard, focusing on extensibility (JSONB) and GIS.
-  - Source: [[PostgreSQL_Official_About.md]]
-- [x] **[[PocketBase]]**: Detailed overview of the "All-in-One" backend solution for rapid development.
-  - **High Priority** for RV Park Website.
-  - Source: [[PocketBase_Official_Intro.md]]
-- [x] **[[DuckDB]]**: Introduction to "In-process Analytical SQL" for fast data processing and local-first analytics.
-  - Source: [[DuckDB_Official_Why.md]]
-- [x] **[[LanceDB]]**: Guide to the embedded vector database for AI agents and RAG.
-  - Source: [[LanceDB_Official_Overview.md]]
-- [x] **[[Qdrant]]**: Overview of the Rust-based vector similarity search engine for production-grade AI.
-  - Source: [[Qdrant_Official_Overview.md]]
+- [ ] **[[Subagents]]**: Core definition, benefits (speed, focus, isolation), and custom subagent creation (Markdown/YAML).
+- [ ] **[[Frontend Specialist]]**: Example custom subagent for UI/UX architecture and performance optimization.
 
 ## Updates to Existing
-- [x] **[[SQLite]]**: Expand from a "lightweight layer" to a "Full-featured SQL engine," including its role as a serverless application file format.
-  - Source: [[SQLite_Official_About.md]]
-- [x] **[[AI Memory]]**: Add sections on **Vector Databases** (LanceDB, Qdrant) and **Relational Backends** (PostgreSQL) for long-term agent state.
-- [x] **[[RV Park Digital Strategy]]**: Link to **[[PocketBase]]** as the recommended technical stack for the 2026 website implementation.
-- [x] **[[INDEX.md]]**:
-  - Create a new category: **## Database & Storage Systems**.
-  - Move [[SQLite]] under this category.
-  - Add links to [[PostgreSQL]], [[PocketBase]], [[DuckDB]], [[LanceDB]], and [[Qdrant]].
-
-## Link Mapping (Cross-Pollination)
-- [x] **[[PostgreSQL]]** <-> **[[LanceDB]]**: Compare "Embedded" vs. "Server-side" for vector storage.
-- [x] **[[PocketBase]]** <-> **[[SQLite]]**: Explain how PocketBase leverages SQLite for its portable backend.
-- [x] **[[DuckDB]]** <-> **[[Metric Definition]]**: How DuckDB can be used to calculate scalar metrics from raw research logs.
-- [x] **[[AI Memory]]** <-> **[[Vector Databases]]**: Deep dive into semantic similarity vs. exact SQL retrieval.
+- [ ] **[[Agent Skills]]**: Link to [[Subagents]] as the primary mechanism for delegating complex tasks to specialized experts.
+- [ ] **[[Gemini CLI]]**: (Check if exists) or update **[[INDEX.md]]** to include [[Subagents]] under "Agentic Tools".
+- [ ] **[[A2UI]]**: Add a note on how subagents can be used to generate specific A2UI components in parallel.
 
 ## Conflicts to Resolve
-- **None Identified**: The new data complements existing notes without contradiction.
+- *None identified.* The subagents feature is a new architectural layer that complements existing skills and tools.
 
----
-**Next Step**: Task Complete.
+## Naming & Verification
+- New file: `Wiki/Subagents.md` (Checked against INDEX.md: No duplicates).
+- New file: `Wiki/Frontend-Specialist.md` (Checked against INDEX.md: No duplicates).

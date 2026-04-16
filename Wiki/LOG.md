@@ -3,11 +3,19 @@
 ## Summary
 The chronological log of knowledge base activities, recording ingest operations, batch compilations, and updates to the wiki pages.
 
+## [2026-04-16] LINT & SYNTHESIS | Subagents Update
+- Performed full Wiki LINT audit; generated **[[LINT_REPORT.md]]**.
+- Synthesized **[[Subagents]]** Wiki page from the April 15 announcement.
+- Fixed broken wikilinks in **[[RV Park Operations 2026]]**, **[[RV Park Infrastructure]]**, and **[[LOG.md]]**.
+- Created stubs for **[[TypeScript]]** and **[[Modelfile]]**.
+- Updated **[[INDEX.md]]** with **Database Infrastructure** and **ACP Mode**.
+- Cleaned up hidden BOM from `deep-researcher.md` agent definition.
+
 ## [2026-04-12] INGEST | Infrastructure & Stubs
 - Ingested technical research for **[[Ollama]]** and **[[Vercel AI SDK]]**.
-- Created dedicated technical pages for **[[Ollama.md]]** and **[[Vercel AI SDK.md]]**.
-- Created operational stubs for **[[Claude 3.7.md]]**, **[[SQLite.md]]**, and **[[Honcho.md]]**.
-- Updated **[[INDEX.md]]**, **[[OpenRouter.md]]**, **[[Pi Coding Agent.md]]**, and **[[Hermes Agent.md]]** with a complete dependency graph.
+- Created dedicated technical pages for **[[Ollama]]** and **[[Vercel AI SDK]]**.
+- Created operational stubs for **[[Claude 3.7]]**, **[[SQLite]]**, and **[[Honcho]]**.
+- Updated **[[INDEX]]**, **[[OpenRouter]]**, **[[Pi Coding Agent]]**, and **[[Hermes Agent]]** with a complete dependency graph.
 - Finalized standardization of Wiki naming conventions (Space-delimited).
 
 ## [2026-04-12] INGEST | Agent Technical Deep-Dive

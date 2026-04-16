@@ -50,6 +50,7 @@ Welcome to the **LLM-Managed Knowledge Base**, a persistent knowledge substrate 
 - **[[Ollama]]**: Local LLM orchestrator and model server.
 - **[[Vercel AI SDK]]**: Unified provider interface and agentic UI toolkit.
 - **[[A2UI]]**: Agentic AI User Interface protocol (declarative, secure).
+- **[[Subagents]]**: Delegated, specialized expert agents with isolated contexts.
 - **[[Unsloth]]**: Highly optimized fine-tuning framework for local training.
 - **[[Pi Coding Agent]]**: Lean, extensible CLI agent for research and code.
 - **[[Agent Skills]]**: Modular capabilities for autonomous agents.
@@ -59,9 +60,17 @@ Welcome to the **LLM-Managed Knowledge Base**, a persistent knowledge substrate 
 
 ## Infrastructure & Memory
 - **[[Honcho]]**: Dialectic user modeling and profile persistence.
+- **[[ACP Mode]]**: Agentic Control Protocol for secure tool execution.
+
+## Database Infrastructure
+- **[[SQLite]]**: Embedded, local-first application database.
+- **[[PocketBase]]**: All-in-one Go backend with embedded SQLite.
+- **[[PostgreSQL]]**: Enterprise-grade relational database for agent state.
+- **[[DuckDB]]**: Analytical database for in-process OLAP.
+- **[[LanceDB]]**: Serverless vector database for AI memory.
+- **[[Qdrant]]**: High-performance vector search engine.
 
 ## Maintenance
-- **[[LOG.md|System Log]]**: Chronological record of ingests and updates.
-
-- **Health Check**: Monthly review of the Wiki for contradictions and structure.
+- **[[LOG|System Log]]**: Chronological record of ingests and updates.
+- **[[Health Check]]**: Monthly review of the Wiki for contradictions and structure.
 - **Archive**: Storage for processed raw source materials.
